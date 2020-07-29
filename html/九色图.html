@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>七色图</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        h2{
+            margin: 10px 50px;
+        }
+        ul{
+            width: 350px;
+            margin: 20px 50px;
+            list-style: none;
+            border: 1px dotted #aaa;
+        }
+        li{
+            width: 100%; height: 50px;
+            font-size: 12px;
+            font-family: Consolas;
+            text-indent: 20px;
+            line-height: 50px;
+        }
+
+        .red{background: #ff0000;}
+        .orange{
+            background: #FF8000; /*128*/
+            background: #FF6100; /*128*/
+            /*background: rgb(255,165,0);*/
+        }
+        .yellow{background: #FFFF00;}
+        .green{background: #00FF00;}
+        .cyan{
+            background: #00FFFF;
+            /*background: rgb(0,128,255);*/
+        }
+        .blue{background: #0000FF; color: #fff;}
+        .purple{
+            /*background: #8000FF;*/ /*128*/
+            background: #FF00FF;
+            color: #fff;
+        }
+        .black{background: #000000; color: #fff;}
+        .white{background: #FFFFFF;}
+		
+		#lineargrad{
+			position: fixed;
+			right: 10px; top: 5px;
+			width: 800px; height: 250px;
+			/*background: linear-gradient(#000,#fff);
+			background: -webkit-linear-gradient(left,#000,#fff);*/
+			background: linear-gradient(to right,#000,#fff);
+			background: linear-gradient(to right, #f00,#f60,#ff0,#0f0,#0ff,#00f,#f0f);
+		}
+		#lineargrad2{
+			position: fixed;
+			right: 10px; top: 260px;
+			width: 800px; height: 250px;
+
+			background: linear-gradient(to right, #000,#f00 35%,#000 35%,#0f0 70%,#000 70%,#00f);
+		}
+		#lineargrad3{
+			position: fixed;
+			right: 10px; top: 515px;
+			width: 800px; height: 100px;
+
+			background: linear-gradient(to right, #000,#fff);
+		}
+
+    </style>
+</head>
+<body>
+    <h2>九色图</h2>
+    <ul>
+        <li class="red">红 #f00</li>
+        <li class="orange">橙 #f60</li>
+        <li class="yellow">黄 #ff0</li>
+        <li class="green">绿 #0f0</li>
+        <li class="cyan">青 #0ff</li>
+        <li class="blue">蓝 #00f</li>
+        <li class="purple">紫 #f0f</li>
+        <li class="black">黑 #000</li>
+        <li class="white">白 #fff</li>
+    </ul>
+    <p>橙红色、黄绿色、青蓝色、紫红色</p>
+    <p>深色系: 黑色,深蓝色,棕色,深绿色,青色等.(蓝、紫、红)
+		<br>浅色系:</p>
+
+	<div id="lineargrad"></div>
+	<div id="lineargrad2"></div>
+	<div id="lineargrad3"></div>
+</body>
+</html>

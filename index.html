@@ -1,0 +1,39 @@
+---
+layout:	layout1
+title:	大公鸡博客
+---
+<div class="header">
+	<h1>{{ page.title }}</h1>
+</div>
+<div class="container">
+	<div class="article-heading">
+		<h2>最新文章</h2>
+	</div>
+	<div class="article-body">
+		<ul>{% for post in site.posts %}
+			<li>
+			<div class="blog-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+			<div class="blog-subtitle">{{ post.date| }} | 推荐：{{ post.author }}</div>
+			<div class="blog-summary">{{ post.excerpt |strip_html |strip }}</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="footer"><em class="update">更新日期:{{ 'now'|date:"%Y-%m-%d %H:%M:%S" }}</em>
+		<a href="/html/九色图.html">九色图</a>
+		<a href="https://github.com/whitemitt/whitemitt.github.io">wm仓库</a>
+		<a href="/html/userjs.html">用户脚本</a>
+		<a href="/userJS/del4Script+Link+Style.user.js">用户脚本1</a>
+		<audio id="audio1" src="" loop></audio>
+		<script>
+			var audio1 = document.querySelector('#audio1');
+			audio1.controls=true;
+			audio1.volume=0.3;
+			audio1.src="asset/同じ高みへ.m4a";
+			audio1.play();
+		</script>
+	</div>
+</div>
+<!-- <script type="text/javascript" src="js/jquery-1.10.2.js"></script> -->
+<script type="text/javascript" src="js/index.js"></script>
+

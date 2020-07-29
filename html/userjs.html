@@ -1,0 +1,18 @@
+---
+layout: layout1
+title : 用户脚本列表
+---
+<div class="header">
+	<h1>{{ page.title }}</h1>
+</div>
+<div class="container">
+	<div class="article-heading">
+		<h2>用户脚本列表</h2>
+	</div>
+	<div class="article-body">
+		<ul>{% for file in site.userJS %}
+			<li><a href="{{ site.baseurl }}{{ post.url }}">{{ file.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

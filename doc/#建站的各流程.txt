@@ -1,0 +1,50 @@
+建站的各流程:
+
+
+1.免费域名;
+2.静态网页免费托管; 如GithubPage+Jekyll,
+3.免费主机/免费node服务器;
+ 免费php托管,
+ 免费python程序托管; 如openshift, gitee,
+4.免费空间;
+5.免费数据库;
+
+6.免费代理/免费换IP;
+ https://www.kuaidaili.com/free #国内高匿名代理(收集自互联网,并非本网所有,不对其有效性负责.)
+ http://www.xiladaili.com/ #西拉,国内高逆免费代理,
+
+7.免费内网穿透/内网映射/;
+ oray,nat123,ngrok,
+ 原理: 内网1-外网1 <===> 外网2-内网2
+		\外网0/
+	内网1/2通过访问外网0,得到自身临时外网IP:Port,通过某种方式告诉对方,让对方彼此访问对方的外网进行打洞,
+	对方再访问时就能沿着通道进入内网访问.(感觉不行,因为访问不同IP出口端口可能变化,此时相当于没打通)
+8.外网IP:Port查询;
+ https://ifconfig.me/all
+
+
+
+Jekyll + Github Pages 搭建博客:
+  Jekyll就是将纯文本转化为静态博客网站.
+
+Jekyll的用法:
+ 1安装Jekyll;
+ 2生成项目目录结构;  jekyll build  #将当前目录中的内容生成到./_site目录中
+ 3jekyll项目目录结构:(主要目录)
+	_includes/	可用语句 {% include file.ext %} 把文件 _includes/file.ext 包含进来。
+	_layouts	布局模版文件,
+	_posts		博客文章文件, 内容编写格式要符号 YEAR-MONTH-DAY-title.MARKUP
+	_data		yaml格式文件. 可由 site.data 访问.
+	_site		
+
+ 4.其他的语法还不是很懂,没找到完整的资料.慢慢学习吧.
+ 5.博客头,
+
+
+_layouts/ 布局目录,存放html文件(以yaml语法编写的)
+_posts/	博客文章目录,存放文章文件(以半头, 半yaml语法编写的)
+
+
+
+
+
